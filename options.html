@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Test Extension Options</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+
+<body>
+  <h2>Instructions</h2>
+  <p>Use the fields at the bottom of this window to define the subject line and message for your InMail template. Below you'll find descriptions for the variables that represent data unique to the candidate's profile. Simply substitute in the name of the variable (brackets and all) wherever you'd put the information it represents.
+  </p>
+  <p>There is also a field in which you may enter keywords. The extension will search the candidate's bio, and the description of his/her current position for the presence of these keywords. If the keywords are present, the extension will add a phrase mentioning the experience. If the keywords are not present, nothing will happen. 
+  <h3>Merge Field Descriptions:</h2>
+  <ul>
+    <li>
+      {keywords} - If any of the keywords you enter in the "Keywords" field below are present, this field will include the following sentence: "I also noticed you mentioned specific experience with [keywords present separated by commas]."
+    </li>
+    <li>
+      {length_of_time} - This will measure the amount of time the candidate indicates he/she has been in his/her current role, and add a phrase corresponding to that length of time (eg. "almost two years").
+    </li>
+    <li>
+      {first} - The candidate's first name.
+    </li>
+    <li>
+      {company} - Company listed as current employer.
+    </li>
+    <li> 
+      {title} - Current title listed.
+    </li>
+  </ul>
+  <p>
+  Keywords
+  </p>
+  <div class='input'>
+  <input id="keywords">
+  </div>
+
+  <p>
+  Subject
+  </p>
+  <div class='input'>
+  <input id="subject">
+  </div>
+  <p>
+  Message
+  </p>
+  <textarea id="message"></textarea>
+
+
+  <div id="status"></div>
+  <button id="save">Save</button>
+
+  <script src="options.js"></script>
+</body>
+</html>
